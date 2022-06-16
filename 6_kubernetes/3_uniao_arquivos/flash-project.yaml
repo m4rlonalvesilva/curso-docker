@@ -1,0 +1,31 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: flash-service
+spec:
+  selector:
+    app: flash-app
+  ports:
+    - protocol: 'TCP'
+      port: 5000
+      targetPort: 5000
+  type: LoadBalancer
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flash-app-depoyment
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: flash-app
+  template:
+    metadata:
+      labels:
+        app: flash-app
+    spec:
+      containers:
+        - name: flash
+          image: marlonalvesilva/flash-kub-projeto:3

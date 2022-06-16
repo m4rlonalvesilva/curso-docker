@@ -1,0 +1,31 @@
+* 
+* ==> Audit <==
+* |---------|-------------------|----------|--------------|---------|-------------------------------|-------------------------------|
+| Command |       Args        | Profile  |     User     | Version |          Start Time           |           End Time            |
+|---------|-------------------|----------|--------------|---------|-------------------------------|-------------------------------|
+| start   | --driver=docker   | minikube | MARLON\marlo | v1.25.2 | Mon, 16 May 2022 17:03:10 -03 | Mon, 16 May 2022 17:06:48 -03 |
+| config  | set driver hyperv | minikube | MARLON\marlo | v1.25.2 | Mon, 16 May 2022 23:41:58 -03 | Mon, 16 May 2022 23:41:58 -03 |
+|---------|-------------------|----------|--------------|---------|-------------------------------|-------------------------------|
+
+* 
+* ==> Last Start <==
+* Log file created at: 2022/05/16 23:46:26
+Running on machine: Marlon
+Binary: Built with gc go1.17.7 for windows/amd64
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0516 23:46:26.160811   10228 out.go:297] Setting OutFile to fd 92 ...
+I0516 23:46:26.171743   10228 out.go:349] isatty.IsTerminal(92) = true
+I0516 23:46:26.171743   10228 out.go:310] Setting ErrFile to fd 96...
+I0516 23:46:26.171743   10228 out.go:349] isatty.IsTerminal(96) = true
+I0516 23:46:26.192986   10228 out.go:304] Setting JSON to false
+I0516 23:46:26.198914   10228 start.go:112] hostinfo: {"hostname":"Marlon","uptime":165,"bootTime":1652755421,"procs":207,"os":"windows","platform":"Microsoft Windows 11 Home Single Language","platformFamily":"Standalone Workstation","platformVersion":"10.0.22000 Build 22000","kernelVersion":"10.0.22000 Build 22000","kernelArch":"x86_64","virtualizationSystem":"","virtualizationRole":"","hostId":"6dfef075-ac93-4c13-a5d8-bfce50807fc3"}
+W0516 23:46:26.198914   10228 start.go:120] gopshost.Virtualization returned error: not implemented yet
+I0516 23:46:26.199952   10228 out.go:176] 😄  minikube v1.25.2 on Microsoft Windows 11 Home Single Language 10.0.22000 Build 22000
+I0516 23:46:26.200489   10228 notify.go:193] Checking for updates...
+I0516 23:46:26.202276   10228 config.go:176] Loaded profile config "minikube": Driver=docker, ContainerRuntime=docker, KubernetesVersion=v1.23.3
+W0516 23:46:26.204535   10228 out.go:241] ❗  Deleting existing cluster minikube with different driver docker due to --delete-on-failure flag set by the user. 
+I0516 23:46:26.206202   10228 out.go:176] 
+W0516 23:46:26.206737   10228 out.go:241] 💢  Exiting due to GUEST_DRIVER_MISMATCH: The existing "minikube" cluster was created using the "docker" driver, which is incompatible with requested "hyperv" driver.
+W0516 23:46:26.208035   10228 out.go:241] 💡  Suggestion: Delete the existing 'minikube' cluster using: 'minikube delete', or start the existing 'minikube' cluster using: 'minikube start --driver=docker'
+
+* 
